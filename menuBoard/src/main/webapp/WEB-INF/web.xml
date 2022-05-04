@@ -1,0 +1,11 @@
+<web-app>
+ <servlet>
+   <servlet-name>menuBoard</servlet-name>
+   <servlet-class>board</servlet-class>
+</servlet>
+ <servlet-mapping>
+   <servlet-name>menuBoard</servlet-name>
+   <url-pattern>/tv</url-pattern>
+ </servlet-mapping>
+</web-app>
+
