@@ -36,3 +36,10 @@ function checkTime(i) {
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
+function getWidth(){
+var width = screen.width;
+var pageString = location.search;
+var page = pageString.substring(6, pageString.indexOf("&"));
+var servlet = pageString.substring(pageString.indexOf("&serv=") +6, pageString.length);
+location.href = "/menuBoard/"+servlet+"?page="+page+"&width="+width;
+}

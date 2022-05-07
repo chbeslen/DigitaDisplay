@@ -7,10 +7,11 @@ import java.io.*;
 import java.net.URL;
 import java.util.*;
 public class board extends HttpServlet{
-	public void doGet (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
-		//doPost(req, res);  
+	private static final long serialVersionUID = 1L;
+	public void doGet (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{ 
 		PrintWriter  msg = res.getWriter();
-		//msg.println(homePage());
+		System.out.println(req.getContextPath());
+		msg.println(homePage());
 	}
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
 		res.setContentType("text/html");
@@ -79,7 +80,7 @@ public class board extends HttpServlet{
 				
 			}
 		}
-		menuItemsPage += "\n\t\t\t</table>\n\t\t</div>\n\t</div>\n</body>\n</html>";
+		menuItemsPage += "\n\t\t\t</table>\n\t\t</div>\n\t</div>\n</div>\n</body>\n</html>";
 		return menuItemsPage;
 	}
 	String menuItem(menu m, int i) {
@@ -97,26 +98,26 @@ public class board extends HttpServlet{
 	}
 	String webHeather() {
 		return "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>TV Menu Display</title>"
-//				+ "\n\t\t<script type='text/javascript' src='https://menuboardfiles.s3.amazonaws.com/board.js'></script>"
-//				+ "\n\t\t<link rel='stylesheet' type='text/css' href='https://menuboardfiles.s3.amazonaws.com/board.css'/>"
+				+ "\n\t\t<script type='text/javascript' src='https://menuboardfiles.s3.amazonaws.com/board.js'></script>"
+				+ "\n\t\t<link rel='stylesheet' type='text/css' href='https://menuboardfiles.s3.amazonaws.com/board.css'/>"
 				+ "\n\t\t<link rel='stylesheet' type='text/css' href='board.css'/>\n"
 				+ "\t\t<script type='text/javascript' src='board.js'></script>\n"
 				+ "\t\t<meta charset='utf-8' name='viewport' content='width=device-width, initial-scale=1'>\n\t</head> "
-				+ "\n<body class='home' onload='startTime()'>\n"
+				+ "\n<body class='home' onload='startTime()'>\n<div class='content'>\n"
 				+ "\t<button class='fullButton' onclick='openFullscreen();'><div id='clock'>Welcome to Listranis at McLean</div></button>"
-				+ "\n\t<div class='column'>\n\t\t<div class='row'>\n\t\t\t<table id='myTable'>";
+				+ "\n<div class='column'>\n\t\t<div class='row'>\n\t\t\t<table id='myTable'>";
 	}
 	String homePage(){
 		String s = "<html>\n <head>\n<title>Listrani's at McLean restaurant Menu Board</title>"
 				+ "\n<meta name=viewport content=width=device-width, initial-scale=1>"
-//				+ "\n<script type='text/javascript' src='https://menuboardfiles.s3.amazonaws.com/board.js'></script>"
-//				+ "\n<link rel='stylesheet' type='text/css' href='https://menuboardfiles.s3.amazonaws.com/board.css'/>"
+				+ "\n<script type='text/javascript' src='https://menuboardfiles.s3.amazonaws.com/board.js'></script>"
+				+ "\n<link rel='stylesheet' type='text/css' href='https://menuboardfiles.s3.amazonaws.com/board.css'/>"
 				+ "\n<script type='text/javascript' src='board.js'></script>"
 				+ "\n<link rel='stylesheet' type='text/css' href='board.css'/>"
 				+ "</head>\n<body>\n<div class = 'main' id='main'>\n<img id='img1' title=logo src=https://menuboardfiles.s3.amazonaws.com/logo.png>"
 				+ "\n<p> Welcome to Listrani's at McLean restaurant Menu Board.</p>"
 				+ "\n<p> Please Select the page you would like to view:</p>"
-				+ "\n<form id='displayRequest' method='post' action='/menuBoard/tv'>";
+				+ "\n<form id='displayRequest' method='post' action='/menuBoard/'>";
 		for(int i = 1; i < 7; i++)
 			s+= "\n<input type='submit' name='display' value='TV " + i + " Display'/>";
 		s+= "\n<input type='submit' name='display' value='Mobile'/>";

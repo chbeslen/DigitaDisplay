@@ -1,64 +1,66 @@
 * {
   box-sizing: border-box;
 }
-table {
+
+.content {
+  margin: auto;
+}table {
   border-collapse: collapse;
   padding: 0px;
-  width:150px;
+  width: 24vw;
 }
-tr:nth-child(even){background-color: #f2f2f2}
-
 th {
   background-color: #F3AA2C;
   color: white;
 }
 
 .fullButton{
-	width:100%;
-	font-size: 8px;
+	align-content: center;
+	width:98vw;
+	font-size: 1.5vw;
 }
 /* Create a two-column layout */
 .column {
   float: left;
-  padding: 1px;
+  padding: 0.225vw;
 }
 /* Clearfix (clear floats) */
 .row::after {
   content: "";
   clear: both;
   display: table;
-  padding: 1px;
+  padding: 0.24vw;
 }
 .heather{
 	vertical-align: text-top;
 	text-align: center;
-	word-spacing: 10px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	font-size: 8px;
+	font-size: 1.5vw;
 }
 .name{
 	vertical-align: text-top;
 	text-align: left;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	font-size: 6px;
+	font-size: 1.15vw;
 }
 .price{
 	vertical-align: text-top;
 	text-align: right;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	font-size: 6px;
-	width:90px;
+	font-size: 1vw;
+	width:6vw;
 }
 .description{
+	background-color: #f2f2f2;
 	vertical-align: text-top;
 	text-align: left;
 	font-family: Arial, Helvetica, sans-serif;
 	font-style: italic;
 	font-stretch: expanded;
-	font-size: 4px;
+	font-size: 0.9vw;
 }
 .main{
 	text-align: center;
