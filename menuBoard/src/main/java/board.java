@@ -10,7 +10,7 @@ public class board extends HttpServlet{
 	public void doGet (HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
 		//doPost(req, res);  
 		PrintWriter  msg = res.getWriter();
-		msg.println(homePage());
+		//msg.println(homePage());
 	}
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
 		res.setContentType("text/html");
@@ -97,8 +97,8 @@ public class board extends HttpServlet{
 	}
 	String webHeather() {
 		return "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>TV Menu Display</title>"
-				//+ "\n\t\t<script type='text/javascript' src='https://menuboardfiles.s3.amazonaws.com/board.js'></script>"
-				//+ "\n\t\t<link rel='stylesheet' type='text/css' href='https://menuboardfiles.s3.amazonaws.com/board.css'/>"
+//				+ "\n\t\t<script type='text/javascript' src='https://menuboardfiles.s3.amazonaws.com/board.js'></script>"
+//				+ "\n\t\t<link rel='stylesheet' type='text/css' href='https://menuboardfiles.s3.amazonaws.com/board.css'/>"
 				+ "\n\t\t<link rel='stylesheet' type='text/css' href='board.css'/>\n"
 				+ "\t\t<script type='text/javascript' src='board.js'></script>\n"
 				+ "\t\t<meta charset='utf-8' name='viewport' content='width=device-width, initial-scale=1'>\n\t</head> "
