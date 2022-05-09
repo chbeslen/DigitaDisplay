@@ -3,22 +3,16 @@
 <head>
     <title> Listrani's at McLean restaurant Menu Board  </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type='text/javascript' src='board.js'></script>
-    <link rel='stylesheet' type='text/css' href='board.css'/>
+    <script type='text/javascript' src='/files/board.js'></script>
+    <link rel='stylesheet' type='text/css' href='/files/board.css'/>
 </head>
 <body>
 	<div class = 'main' id='main'>
-		<img id='img1' title=logo src=logo.png>
-		<p> Welcome to Listrani's at McLean restaurant Menu Board...</p>
+		<img id='img1' title=logo src=/files/img/mblogo.png>
+		<p> Welcome to restaurant Menu Board Web Application...</p>
 		<p> Please Select the page you would like to view:</p>
-		<form id='displayRequest' method='post' action='/menuBoard/'>
-			<input type='submit' name='display' value='TV 1 Display' />
-			<input type='submit' name='display' value='TV 2 Display' />			
-			<input type='submit' name='display' value='TV 3 Display' />			
-			<input type='submit' name='display' value='TV 4 Display' />			
-			<input type='submit' name='display' value='TV 5 Display' />			
-			<input type='submit' name='display' value='TV 6 Display' />	
-			<input type='submit' name='display' value='Mobile' />			
+		<form id='displayRequest' method='get' action='http://menuboard.us-east-1.elasticbeanstalk.com/board'>
+			<input type='submit' name='display' value='Listranis at McLean' />	
 		</form>
 	</div>
 </body>

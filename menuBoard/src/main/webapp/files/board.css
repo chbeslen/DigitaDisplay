@@ -1,7 +1,20 @@
 * {
   box-sizing: border-box;
 }
-
+#logo{
+	padding: 5px;
+	width: 25vw;
+}
+#qr{
+	text-align: center;
+	display: block;
+	margin: auto;
+	padding: 5px;
+	width: 12vw;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 1.5vw;
+}
 .content {
   margin: auto;
 }table {
@@ -13,11 +26,39 @@ th {
   background-color: #F3AA2C;
   color: white;
 }
-
-.fullButton{
+.leftButton{
 	align-content: center;
-	width:98vw;
+	margin: auto;
+	text-align: center;
+	width:15vw;
 	font-size: 1.5vw;
+}
+.centerButton{
+	align-content: center;
+	margin: auto;
+	text-align: center;
+	width:67vw;
+	font-size: 1.5vw;
+}
+.rightButton{
+	align-content: center;
+	margin: auto;
+	text-align: center;
+	width:15vw;
+	font-size: 1.5vw;
+}
+.homeButton{
+	align-content: center;
+	display: block;
+	font-size: 1vw;
+	margin: auto;
+	text-align: center;
+	width:96vw;
+}
+.topButtons{
+	display: block;
+	align-content: center;
+	margin: auto;
 }
 /* Create a two-column layout */
 .column {
@@ -66,7 +107,7 @@ th {
 	text-align: center;
 	display: block;
 	margin: auto;
-	width: 100%;
+	width: 50vw;
 	border: 3px solid #73AD21;
 	padding: 10px;
 }

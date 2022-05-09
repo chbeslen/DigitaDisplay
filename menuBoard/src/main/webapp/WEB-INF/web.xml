@@ -1,11 +1,11 @@
 <web-app>
- <servlet>
+  <servlet>
    <servlet-name>menuBoard</servlet-name>
    <servlet-class>board</servlet-class>
 </servlet>
  <servlet-mapping>
    <servlet-name>menuBoard</servlet-name>
-   <url-pattern>/</url-pattern>
+   <url-pattern>/board</url-pattern>
  </servlet-mapping>
 </web-app>
 
